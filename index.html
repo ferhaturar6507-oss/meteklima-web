@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mete Klima - Antalya'nın Serin Nefesi</title>
+<!-- Google Fonts: Inter & Playfair Display -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:wght@400;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="stylesheet" href="trail.css">
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#7e4b00",
+                        "inverse-surface": "#303030",
+                        "on-surface": "#1b1c1c",
+                        "on-primary": "#ffffff",
+                        "primary": "#30628a",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-container": "#275b82",
+                        "secondary": "#5d5f5f",
+                        "on-tertiary-fixed-variant": "#683d00",
+                        "inverse-on-surface": "#f3f0f0",
+                        "on-tertiary-fixed": "#2c1700",
+                        "surface-bright": "#fcf9f8",
+                        "on-secondary-container": "#5f6161",
+                        "tertiary-fixed-dim": "#ffb86b",
+                        "surface-tint": "#30628a",
+                        "on-primary-fixed-variant": "#104a70",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "surface-container-highest": "#e4e2e1",
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#9bcbf8",
+                        "surface-container-low": "#f6f3f2",
+                        "background": "#fcf9f8",
+                        "tertiary-fixed": "#ffdcbc",
+                        "tertiary": "#895100",
+                        "on-secondary-fixed-variant": "#454747",
+                        "surface-container-high": "#eae7e7",
+                        "on-primary-fixed": "#001d32",
+                        "secondary-container": "#dcdddd",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#ffc180",
+                        "inverse-primary": "#9bcbf8",
+                        "outline": "#72787f",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed": "#cde5ff",
+                        "on-surface-variant": "#41474e",
+                        "surface-dim": "#dcd9d9",
+                        "outline-variant": "#c1c7cf",
+                        "primary-container": "#a2d2ff",
+                        "on-background": "#1b1c1c",
+                        "surface-variant": "#e4e2e1",
+                        "error-container": "#ffdad6",
+                        "surface": "#fcf9f8",
+                        "surface-container": "#f0eded",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed": "#e2e2e2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-padding": "120px",
+                        "container-max": "1200px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Inter"],
+                        "headline-md": ["Caveat"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "display-lg-mobile": ["Caveat"],
+                        "display-lg": ["Caveat"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "headline-md": ["44px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-lg-mobile": ["56px", { "lineHeight": "1.1", "fontWeight": "700" }],
+                        "display-lg": ["80px", { "lineHeight": "1.0", "letterSpacing": "-0.01em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        /* Ambient Blue Tinted Shadow Utility */
+        .shadow-ambient {
+            box-shadow: 0 30px 60px -15px rgba(162, 210, 255, 0.15);
+        }
+        
+        /* Smooth Accordion */
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+        details[open] summary ~ * { animation: sweep .3s ease-in-out; }
+        @keyframes sweep {
+            0%    {opacity: 0; transform: translateY(-10px)}
+            100%  {opacity: 1; transform: translateY(0)}
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- JSON TopNavBar Component -->
+<nav class="absolute top-0 left-0 right-0 z-50 flex justify-between items-center px-section-padding py-6 w-full max-w-container-max mx-auto md:px-section-padding px-margin-mobile">
+<div class="text-body-lg font-headline-md tracking-tight text-on-surface dark:text-inverse-on-surface">Mete Klima</div>
+<div class="hidden md:flex gap-8">
+<a class="text-label-caps font-label-caps text-primary dark:text-primary-fixed-dim border-b-2 border-primary pb-1 hover:scale-105 transition-transform duration-300" href="#">Anasayfa</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary transition-colors hover:scale-105 transition-transform duration-300" href="#hizmetler">Hizmetler</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary transition-colors hover:scale-105 transition-transform duration-300" href="#hakkimizda">Hakkımızda</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary transition-colors hover:scale-105 transition-transform duration-300" href="#surec">Süreç</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary transition-colors hover:scale-105 transition-transform duration-300" href="#neden-biz">Neden Biz?</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary transition-colors hover:scale-105 transition-transform duration-300" href="#referanslar">Referanslar</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary transition-colors hover:scale-105 transition-transform duration-300" href="#sss">SSS</a>
+</div>
+<a class="hidden md:inline-flex items-center justify-center px-6 py-3 rounded-full bg-surface-container-highest text-on-surface text-label-caps font-label-caps hover:scale-105 transition-transform duration-300" href="tel:+905070325640">
+            İletişim
+        </a>
+<!-- Mobile Menu Icon (Simplified for static output) -->
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</nav>
+<main>
+<!-- 1. Hero Section -->
+<section class="relative w-full min-h-screen flex items-center justify-center pt-24 pb-section-padding overflow-hidden px-margin-mobile md:px-0">
+<!-- Full bleed background video -->
+<video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover pointer-events-none">
+    <source src="Kliam_hava_üflesin_1080p_202608221723.mp4" type="video/mp4">
+</video>
+<div class="relative z-10 flex flex-col items-end text-right w-full max-w-container-max mx-auto px-margin-mobile md:px-gutter gap-10 mt-12">
+<!-- Social Proof Badge -->
+<div class="flex items-center gap-3 bg-surface-container-lowest/70 backdrop-blur-md px-5 py-2 rounded-full border border-surface-container shadow-ambient">
+<div class="flex -space-x-3">
+<img class="w-8 h-8 rounded-full border-2 border-surface-container-lowest object-cover" data-alt="Close up portrait photo of a smiling adult woman in a brightly lit, clean indoor setting. She looks refreshed and comfortable. The lighting is soft and flattering, emphasizing a cool, modern lifestyle aesthetic with a neutral background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkew5SRqDx-f8_HyW2n3RJ3-pTAeKIh5lZRFbLQ2TU-HeHyhjjDUIvC1mJEcoutuKusBblj13IbZGNh06TxtL3wSbDL7pivJIEyKxmfA4aFYzVkc6LZ5KHPyVr1OfTSwEpA5hHfGB8rs5Ms6N3dgab4EhDyOTmNGYYZLhQ4IaTMfoBS7XhMkkOyfGqRR8LdP0Iic73iJh-szcCiGVBNrhr0M_TFVrdToMVFqelQvW1vQDvXYU2yonthg"/>
+<img class="w-8 h-8 rounded-full border-2 border-surface-container-lowest object-cover" data-alt="Close up portrait photo of a satisfied adult man in a brightly lit, clean indoor setting. He looks relaxed and comfortable. The lighting is soft and flattering, emphasizing a cool, modern lifestyle aesthetic with a neutral background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYJOKb_o0iq9BEEXj5T4bHArAeUTtStRLSqtW8itDyNetbRCQXmR8PqVtUy6dBMB-h83oEOrns9Yuw-67PpNKpYznfZILUgS0_sDPa8NaqYNPpjv7cZefX-KBGYEhLsW_Yla3X7f6pMN_SOofv3eB7i3NehUSETr2wPq2GH8JIY_ptiyvPkmGauLBN7kC7P1xEoYglO6ug1xgXOTwDVTZOs_16YqbKOwzESf-h5HQtdMmvBF_uIbODFg"/>
+<img class="w-8 h-8 rounded-full border-2 border-surface-container-lowest object-cover" data-alt="Close up portrait photo of a joyful young couple in a brightly lit, clean indoor setting. They look refreshed and comfortable. The lighting is soft and flattering, emphasizing a cool, modern lifestyle aesthetic with a neutral background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC856Y7uBon2bZw430uN8OjfSTSgEjwWD7tm5W158MLhmGeiQa9D3DvaZe_CfcA7fgOt50Bks9ahM04Iyh-2EJhTWi3EDU4LBKDhYWOdI0PuMIVHB83Zx2_VfHNbcOYQC8XQuD4pxIZu3jN3KCoPu63cWzIoiSdBha2nFNL1mA33pSiki2uzDplTC6ZN7DTWl8V7r1g6C7AIhBv71fIbHQmy9MYCIpInYJs5ElXul6cYIRVWUlFYHcK-A"/>
+</div>
+<span class="text-label-caps font-label-caps text-on-surface-variant pt-1">Antalya'da 5000+ Mutlu Ev</span>
+</div>
+<!-- Headline -->
+<h1 id="animated-heading" class="text-[64px] md:text-[100px] leading-[1.1] font-sans text-gray-800 tracking-tight drop-shadow-md opacity-0 translate-y-[100px] font-normal">
+    Mete Klima
+</h1>
+<!-- CTAs -->
+<div class="flex flex-col gap-5 mt-6">
+<a class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-on-surface text-surface-container-lowest text-label-caps font-label-caps hover:scale-[1.02] transition-transform duration-300" href="https://wa.me/905070325640?text=Merhaba,%20Mete%20Klima%20hizmetleri%20için%20fiyat%20teklifi%20almak%20istiyorum." target="_blank">
+                        Teklif Al
+                    </a>
+<a class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-surface-container-lowest text-on-surface text-label-caps font-label-caps shadow-ambient hover:scale-[1.02] transition-transform duration-300" href="#hizmetler">
+                        Hizmetleri Gör
+                    </a>
+</div>
+</div>
+</section>
+<!-- 2. About Section -->
+<section class="py-section-padding px-margin-mobile md:px-gutter max-w-container-max mx-auto w-full flex flex-col md:flex-row items-center gap-16 md:gap-24" id="hakkimizda">
+<!-- Image Left -->
+<div class="w-full md:w-1/2 relative h-[500px] md:h-[700px]">
+<img class="w-full h-full object-cover rounded-2xl shadow-ambient z-10" alt="Technician repairing air condition" src="images/about-image.jpeg"/>
+</div>
+<!-- Content Right -->
+<div class="w-full md:w-1/2 flex flex-col items-start gap-6">
+<span class="inline-block px-5 py-3 rounded-full bg-primary-container/30 text-on-primary-container text-sm font-semibold tracking-wider uppercase">Hakkımızda</span>
+<h2 class="text-[48px] md:text-[80px] leading-[1.0] font-headline-md text-on-surface font-bold">Size Özel İklimlendirme Çözümleri</h2>
+<p class="text-[18px] md:text-[22px] font-body-md text-on-surface-variant max-w-xl leading-relaxed">
+                    Antalya'nın zorlu yaz sıcaklarında evinizi bir vahaya dönüştürüyoruz. Yılların tecrübesiyle, mekanınızın dinamiklerine en uygun, enerji verimliliği yüksek ve sessiz çalışan iklimlendirme sistemlerini özenle kuruyoruz. Profesyonel ekibimizle sadece serinlik değil, kesintisiz konfor vaat ediyoruz.
+                </p>
+</div>
+</section>
+<!-- 3. Services Section -->
+<section class="py-16 bg-surface-container-lowest w-full" id="hizmetler">
+    <div class="max-w-7xl mx-auto px-4 md:px-8 flex flex-col gap-6">
+        <!-- Top Row (3 items) -->
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <div class="bg-white rounded-[28px] p-4 shadow-sm border border-surface-container-low flex flex-col group cursor-pointer hover:shadow-md transition-all duration-300 hover:scale-[1.02]">
+                <div class="w-full h-56 md:h-64 rounded-[20px] overflow-hidden mb-5 relative">
+                    <img src="images/kurulum.jpeg" alt="Klima Kurulumu" class="w-full h-full object-cover">
+                </div>
+                <div class="px-4 pb-4 flex flex-col flex-grow">
+                    <h3 class="text-4xl md:text-5xl font-headline-md font-bold text-on-surface mb-3">Klima Kurulumu</h3>
+                    <p class="text-on-surface-variant mb-6 text-base flex-grow">Uzman ekibimizle yeni nesil cihazların profesyonel ve temiz kurulumu.</p>
+                    <div class="flex items-center text-[#4A1D96] font-bold gap-1 text-base">
+                        <span>İncele</span>
+                        <span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="bg-white rounded-[28px] p-4 shadow-sm border border-surface-container-low flex flex-col group cursor-pointer hover:shadow-md transition-all duration-300 hover:scale-[1.02]">
+                <div class="w-full h-56 md:h-64 rounded-[20px] overflow-hidden mb-5 relative">
+                    <img src="images/isitma.jpeg" alt="Isıtma Sistemleri" class="w-full h-full object-cover">
+                </div>
+                <div class="px-4 pb-4 flex flex-col flex-grow">
+                    <h3 class="text-4xl md:text-5xl font-headline-md font-bold text-on-surface mb-3">Isıtma Sistemleri</h3>
+                    <p class="text-on-surface-variant mb-6 text-base flex-grow">Kış aylarında sıcak ve konforlu ortamlar için yüksek verimli ısı pompaları.</p>
+                    <div class="flex items-center text-[#4A1D96] font-bold gap-1 text-base">
+                        <span>İncele</span>
+                        <span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white rounded-[28px] p-4 shadow-sm border border-surface-container-low flex flex-col group cursor-pointer hover:shadow-md transition-all duration-300 hover:scale-[1.02]">
+                <div class="w-full h-56 md:h-64 rounded-[20px] overflow-hidden mb-5 relative">
+                    <img src="images/bakim.jpeg" alt="Bakım Planları" class="w-full h-full object-cover">
+                </div>
+                <div class="px-4 pb-4 flex flex-col flex-grow">
+                    <h3 class="text-4xl md:text-5xl font-headline-md font-bold text-on-surface mb-3">Bakım Planları</h3>
+                    <p class="text-on-surface-variant mb-6 text-base flex-grow">Düzenli periyodik bakımlarla cihazınızın ömrünü uzatın ve enerjiden tasarruf edin.</p>
+                    <div class="flex items-center text-[#4A1D96] font-bold gap-1 text-base">
+                        <span>İncele</span>
+                        <span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- 4. Interactive Mood -->
+<section id="mood-section" class="relative w-full py-[160px] flex items-center justify-center overflow-hidden cursor-crosshair bg-[#F8F9FA]">
+
+<!-- Image Trail Container -->
+<div id="trail-container" class="content-trail">
+    <div class="content__img"><div class="content__img-inner" style="background-image: url('images/trail1.jpeg');"></div></div>
+    <div class="content__img"><div class="content__img-inner" style="background-image: url('images/trail2.jpeg');"></div></div>
+    <div class="content__img"><div class="content__img-inner" style="background-image: url('images/trail3.jpeg');"></div></div>
+    <div class="content__img"><div class="content__img-inner" style="background-image: url('images/trail4.jpeg');"></div></div>
+    <div class="content__img"><div class="content__img-inner" style="background-image: url('images/trail5.jpeg');"></div></div>
+    <div class="content__img"><div class="content__img-inner" style="background-image: url('images/trail6.jpeg');"></div></div>
+</div>
+
+<div class="relative z-20 flex flex-col items-center text-center gap-10 pointer-events-none">
+<div class="flex flex-col items-center justify-center gap-2">
+    <span class="font-['Caveat'] text-4xl text-on-surface opacity-80 -rotate-2">İmleci hareket ettir!</span>
+    <h2 class="text-display-lg font-display-lg text-on-surface drop-shadow-md">Bugün havanız nasıl?</h2>
+</div>
+<div class="flex flex-col sm:flex-row gap-6 pointer-events-auto">
+<button class="px-10 py-5 rounded-full bg-primary text-surface-container-lowest text-label-caps font-label-caps tracking-widest shadow-ambient hover:scale-[1.05] transition-transform duration-300">
+                        FERAHLIK İSTİYORUM
+                    </button>
+<button class="px-10 py-5 rounded-full bg-surface-container-lowest text-tertiary text-label-caps font-label-caps tracking-widest shadow-ambient hover:scale-[1.05] transition-transform duration-300">
+                        SICAKLIK ARIYORUM
+                    </button>
+</div>
+</div>
+</section>
+
+<!-- 5. Process / Scroll Stack Section -->
+<section class="w-full relative bg-surface-container-lowest" id="surec">
+    <div class="max-w-7xl mx-auto px-4 py-24 flex flex-col">
+        <div class="text-center mb-20">
+            <h2 class="text-headline-md font-headline-md text-on-surface">Süreç Nasıl İlerliyor?</h2>
+            <p class="text-body-lg font-body-lg text-on-surface-variant mt-4">Size en iyi hizmeti sunmak için izlediğimiz 3 basit adım.</p>
+        </div>
+        
+        <!-- Sticky Stacking Cards -->
+        <div class="relative flex flex-col gap-[25vh] pb-[10vh]">
+            <!-- Card 1 -->
+            <div class="sticky top-[12vh] w-full bg-white rounded-[32px] p-6 lg:p-10 shadow-xl border border-surface-container flex flex-col lg:flex-row gap-8 lg:gap-16 items-center origin-top transform-gpu" style="z-index: 10;">
+                <div class="w-full lg:w-5/12 h-64 lg:h-[360px] rounded-2xl overflow-hidden shrink-0 shadow-sm">
+                    <img src="images/trail5.jpeg" alt="Keşif ve Planlama" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col gap-6 lg:w-7/12 py-4">
+                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary font-headline-md text-4xl">1</div>
+                    <h3 class="text-headline-md font-headline-md text-on-surface">Ücretsiz Keşif & Planlama</h3>
+                    <p class="text-on-surface-variant text-lg lg:text-xl leading-relaxed">Mekanınıza en uygun iklimlendirme çözümü için uzman ekibimiz ziyarette bulunur. Kapasite ihtiyacını belirler, estetik ve verimli bir montaj noktası önerir.</p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="sticky top-[16vh] w-full bg-[#f8fafc] rounded-[32px] p-6 lg:p-10 shadow-2xl border border-surface-container-low flex flex-col lg:flex-row gap-8 lg:gap-16 items-center origin-top transform-gpu" style="z-index: 20;">
+                <div class="w-full lg:w-5/12 h-64 lg:h-[360px] rounded-2xl overflow-hidden shrink-0 shadow-sm">
+                    <img src="images/trail6.jpeg" alt="Profesyonel Montaj" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col gap-6 lg:w-7/12 py-4">
+                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary font-headline-md text-4xl">2</div>
+                    <h3 class="text-headline-md font-headline-md text-on-surface">Profesyonel Montaj</h3>
+                    <p class="text-on-surface-variant text-lg lg:text-xl leading-relaxed">Kararlaştırılan gün ve saatte adresinize gelerek, evinizi veya ofisinizi kirletmeden, en az tahribatla klimanızın profesyonel kurulumunu gerçekleştiririz.</p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="sticky top-[20vh] w-full bg-[#f1f5f9] rounded-[32px] p-6 lg:p-10 shadow-2xl border border-outline-variant/30 flex flex-col lg:flex-row gap-8 lg:gap-16 items-center origin-top transform-gpu" style="z-index: 30;">
+                <div class="w-full lg:w-5/12 h-64 lg:h-[360px] rounded-2xl overflow-hidden shrink-0 shadow-sm">
+                    <img src="images/trail1.jpeg" alt="Teslimat ve Bakım" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col gap-6 lg:w-7/12 py-4">
+                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary font-headline-md text-4xl">3</div>
+                    <h3 class="text-headline-md font-headline-md text-on-surface">Teslimat & Destek</h3>
+                    <p class="text-on-surface-variant text-lg lg:text-xl leading-relaxed">Cihazın tüm performans testleri yapıldıktan sonra detaylı kullanım bilgisi verilir. İlerleyen yıllarda da periyodik bakım hizmetiyle 7/24 yanınızdayız.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 6. Neden Biz? Section -->
+<section id="neden-biz" class="w-full bg-surface-container-lowest py-24 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 text-center mb-16">
+        <h2 class="text-[48px] md:text-[80px] leading-[1.0] font-headline-md text-on-surface font-bold">Neden Biz?</h2>
+        <p class="text-body-lg text-on-surface-variant mt-4">Teknolojinin estetik ve konforla buluştuğu nokta.</p>
+    </div>
+    
+    <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row relative items-start gap-12" id="neden-biz-content">
+        <!-- Left: Sticky Canvas -->
+        <div class="w-full md:w-1/2 sticky top-[15vh] h-[50vh] md:h-[70vh] rounded-[32px] overflow-hidden shadow-2xl z-10 bg-black">
+            <canvas id="hero-lightpass" class="w-full h-full object-cover"></canvas>
+        </div>
+        
+        <!-- Right: Stack Cards Container -->
+        <div class="w-full md:w-1/2 h-[50vh] md:h-[70vh] relative perspective-1000 mt-12 md:mt-0">
+            <!-- Card 1 -->
+            <div class="scroll-stack-card absolute top-0 left-0 w-full bg-white rounded-[40px] p-12 md:p-16 shadow-2xl border border-surface-container-low origin-top z-10 transform-gpu h-full flex flex-col justify-center">
+                <h3 class="text-4xl md:text-5xl font-headline-md font-bold text-on-surface mb-6">A Sınıfı Enerji Verimliliği</h3>
+                <p class="text-on-surface-variant text-xl md:text-2xl leading-relaxed">Yüksek teknolojili inverter motorlarımız sayesinde enerjiden maksimum tasarruf sağlarken, doğayı koruyan sürdürülebilir bir serinlik elde edersiniz.</p>
+            </div>
+            <!-- Card 2 -->
+            <div class="scroll-stack-card opacity-0 absolute top-0 left-0 w-full bg-[#f8fafc] rounded-[40px] p-12 md:p-16 shadow-2xl border border-surface-container-low origin-top z-20 transform-gpu h-full flex flex-col justify-center">
+                <h3 class="text-4xl md:text-5xl font-headline-md font-bold text-on-surface mb-6">Fısıltı Kadar Sessiz</h3>
+                <p class="text-on-surface-variant text-xl md:text-2xl leading-relaxed">Özel aerodinamik fan yapısı ve izolasyon teknolojisiyle klimalarımız çalışırken varlığını unutturur. Kesintisiz uyku ve huzur sizinle.</p>
+            </div>
+            <!-- Card 3 -->
+            <div class="scroll-stack-card opacity-0 absolute top-0 left-0 w-full bg-[#f1f5f9] rounded-[40px] p-12 md:p-16 shadow-2xl border border-surface-container-low origin-top z-30 transform-gpu h-full flex flex-col justify-center">
+                <h3 class="text-4xl md:text-5xl font-headline-md font-bold text-on-surface mb-6">Akıllı Hava Akımı</h3>
+                <p class="text-on-surface-variant text-xl md:text-2xl leading-relaxed">Mekandaki insan hareketlerini algılayan akıllı sensörler sayesinde, havayı üzerinize değil boşluklara yönlendirerek sağlıklı bir serinleme sunar.</p>
+            </div>
+            <!-- Card 4 -->
+            <div class="scroll-stack-card opacity-0 absolute top-0 left-0 w-full bg-white rounded-[40px] p-12 md:p-16 shadow-2xl border border-surface-container-low origin-top z-40 transform-gpu h-full flex flex-col justify-center">
+                <h3 class="text-4xl md:text-5xl font-headline-md font-bold text-on-surface mb-6">Minimalist & Şık Tasarım</h3>
+                <p class="text-on-surface-variant text-xl md:text-2xl leading-relaxed">Evinizin veya ofisinizin dekorasyonunu bozmayan, özenle tasarlanmış estetik hatlarıyla modern mekanlara kusursuz uyum sağlar.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 7. Testimonials Section -->
+<section class="py-16 bg-surface-container-lowest w-full" id="referanslar">
+    <div class="max-w-7xl mx-auto px-4 md:px-8 flex flex-col gap-12">
+        <div class="text-center flex flex-col items-center gap-4">
+            <h2 class="text-headline-md font-headline-md text-on-surface">Müşterilerimiz Neler Söylüyor?</h2>
+            <p class="text-body-md font-body-md text-on-surface-variant">Antalya'nın dört bir yanında sağladığımız konfor.</p>
+        </div>
+        
+        <div class="flex flex-wrap justify-center gap-6">
+            <!-- Review 1 -->
+            <div class="w-full md:w-[calc(33.333%-16px)] bg-surface-container-low rounded-2xl p-8 flex flex-col gap-6 shadow-sm border border-surface-container hover:shadow-md transition-shadow">
+                <div class="flex text-[#FFB400] gap-1">
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                </div>
+                <blockquote class="text-body-lg font-body-lg text-on-surface italic flex-grow">
+                    "Tek kelimeyle kalitenin adresi Mete beye teşekkür ederim işçiliği temiz ve güzeldi kesinlikle tavsiye ederim."
+                </blockquote>
+                <div class="flex items-center gap-4 pt-6 border-t border-outline-variant/30 mt-auto">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-lg">SŞ</div>
+                    <div class="flex flex-col">
+                        <span class="text-body-md font-bold text-on-surface">Selçuk Şahin</span>
+                        <span class="text-sm text-on-surface-variant">1 Yıl Önce</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="w-full md:w-[calc(33.333%-16px)] bg-surface-container-low rounded-2xl p-8 flex flex-col gap-6 shadow-sm border border-surface-container hover:shadow-md transition-shadow">
+                <div class="flex text-[#FFB400] gap-1">
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                </div>
+                <blockquote class="text-body-lg font-body-lg text-on-surface italic flex-grow">
+                    "Klima bakım ve montaj yaptırdım işçilik güzel ve temiz yaptı herkese tavsiye ederim"
+                </blockquote>
+                <div class="flex items-center gap-4 pt-6 border-t border-outline-variant/30 mt-auto">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-lg">CT</div>
+                    <div class="flex flex-col">
+                        <span class="text-body-md font-bold text-on-surface">coşkun taş</span>
+                        <span class="text-sm text-on-surface-variant">1 Yıl Önce</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="w-full md:w-[calc(33.333%-16px)] bg-surface-container-low rounded-2xl p-8 flex flex-col gap-6 shadow-sm border border-surface-container hover:shadow-md transition-shadow">
+                <div class="flex text-[#FFB400] gap-1">
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                </div>
+                <blockquote class="text-body-lg font-body-lg text-on-surface italic flex-grow">
+                    "Mükemmel müşteri memnuniyeti , Temiz işçilik , kalitenin adresi herkese tavsiye ederim 👍"
+                </blockquote>
+                <div class="flex items-center gap-4 pt-6 border-t border-outline-variant/30 mt-auto">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-lg">EA</div>
+                    <div class="flex flex-col">
+                        <span class="text-body-md font-bold text-on-surface">Erhan Altınay</span>
+                        <span class="text-sm text-on-surface-variant">1 Yıl Önce</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 4 -->
+            <div class="w-full md:w-[calc(33.333%-16px)] bg-surface-container-low rounded-2xl p-8 flex flex-col gap-6 shadow-sm border border-surface-container hover:shadow-md transition-shadow">
+                <div class="flex text-[#FFB400] gap-1">
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                </div>
+                <blockquote class="text-body-lg font-body-lg text-on-surface italic flex-grow">
+                    "Klima temizliği ve yer değişimi yaptırdım çok pratik ve çabuk halledildi çok temiz çalıştı çok memnun kaldım"
+                </blockquote>
+                <div class="flex items-center gap-4 pt-6 border-t border-outline-variant/30 mt-auto">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-lg">ET</div>
+                    <div class="flex flex-col">
+                        <span class="text-body-md font-bold text-on-surface">Elif Tavlar</span>
+                        <span class="text-sm text-on-surface-variant">1 Yıl Önce</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 5 -->
+            <div class="w-full md:w-[calc(33.333%-16px)] bg-surface-container-low rounded-2xl p-8 flex flex-col gap-6 shadow-sm border border-surface-container hover:shadow-md transition-shadow">
+                <div class="flex text-[#FFB400] gap-1">
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                </div>
+                <blockquote class="text-body-lg font-body-lg text-on-surface italic flex-grow">
+                    "Klimamın bakımlarını yaptı temizledi ısıtma soğutmada sorun yaşıyordum mete klima sayesinde sorunlarım giderildi teşekkür ederim tavsiye ederim herkese"
+                </blockquote>
+                <div class="flex items-center gap-4 pt-6 border-t border-outline-variant/30 mt-auto">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-lg">AK</div>
+                    <div class="flex flex-col">
+                        <span class="text-body-md font-bold text-on-surface">ABDULLAH Kılınç</span>
+                        <span class="text-sm text-on-surface-variant">1 Yıl Önce</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- 6. FAQ Section -->
+<section class="py-section-padding bg-surface-container-lowest w-full" id="sss">
+<div class="max-w-[800px] mx-auto px-margin-mobile md:px-0 flex flex-col gap-12">
+<div class="text-center">
+<h2 class="text-headline-md font-headline-md text-on-surface mb-4">Sıkça Sorulan Sorular</h2>
+<p class="text-body-md font-body-md text-on-surface-variant">Aklınıza takılan her şey için buradayız.</p>
+</div>
+<div class="flex flex-col gap-4">
+<!-- FAQ Item -->
+<details class="group bg-surface-container-low rounded-DEFAULT overflow-hidden">
+<summary class="flex justify-between items-center cursor-pointer p-6 bg-transparent text-body-lg font-body-lg text-on-surface font-medium select-none">
+                            Klima montajı ne kadar sürer?
+                            <span class="material-symbols-outlined text-on-surface-variant group-open:rotate-45 transition-transform duration-300" data-icon="add">add</span>
+</summary>
+<div class="p-6 pt-0 text-body-md font-body-md text-on-surface-variant">
+                            Standart bir split klima montajı, mekanın koşullarına bağlı olarak ortalama 2 ila 4 saat arasında tamamlanmaktadır. Ekibimiz en az tahribat ve en yüksek titizlikle çalışır.
+                        </div>
+</details>
+<!-- FAQ Item -->
+<details class="group bg-surface-container-low rounded-DEFAULT overflow-hidden">
+<summary class="flex justify-between items-center cursor-pointer p-6 bg-transparent text-body-lg font-body-lg text-on-surface font-medium select-none">
+                            Bakım sıklığı ne olmalıdır?
+                            <span class="material-symbols-outlined text-on-surface-variant group-open:rotate-45 transition-transform duration-300" data-icon="add">add</span>
+</summary>
+<div class="p-6 pt-0 text-body-md font-body-md text-on-surface-variant">
+                            Maksimum enerji verimliliği ve sağlıklı bir hava kalitesi için klimalarınızın yılda en az iki kez (yaz ve kış sezonları öncesi) profesyonel bakımdan geçmesini önermekteyiz.
+                        </div>
+</details>
+<!-- FAQ Item -->
+<details class="group bg-surface-container-low rounded-DEFAULT overflow-hidden">
+<summary class="flex justify-between items-center cursor-pointer p-6 bg-transparent text-body-lg font-body-lg text-on-surface font-medium select-none">
+                            Garanti süreleriniz nelerdir?
+                            <span class="material-symbols-outlined text-on-surface-variant group-open:rotate-45 transition-transform duration-300" data-icon="add">add</span>
+</summary>
+<div class="p-6 pt-0 text-body-md font-body-md text-on-surface-variant">
+                            Sıfır cihaz satışlarında markanın sunduğu 3 ile 5 yıl arası garantiler geçerlidir. Montaj ve işçilik hizmetlerimiz ise firmamız tarafından 1 yıl tam güvence altındadır.
+                        </div>
+</details>
+<!-- FAQ Item -->
+<details class="group bg-surface-container-low rounded-DEFAULT overflow-hidden">
+<summary class="flex justify-between items-center cursor-pointer p-6 bg-transparent text-body-lg font-body-lg text-on-surface font-medium select-none">
+                            Hangi markalarla çalışıyorsunuz?
+                            <span class="material-symbols-outlined text-on-surface-variant group-open:rotate-45 transition-transform duration-300" data-icon="add">add</span>
+</summary>
+<div class="p-6 pt-0 text-body-md font-body-md text-on-surface-variant">
+                            Sektörün öncü ve güvenilir markaları olan Daikin, Mitsubishi Electric, Samsung, LG ve Bosch gibi dünya standartlarındaki üreticilerle çözüm ortaklığı yapmaktayız.
+                        </div>
+</details>
+</div>
+</div>
+</section>
+
+
+</main>
+<!-- JSON Footer Component -->
+<footer class="bg-surface-container-low dark:bg-inverse-surface text-primary dark:text-primary-fixed-dim full-width rounded-t-lg no-border space-y-12 flat no shadows flex flex-col md:flex-row justify-between items-start px-section-padding py-section-padding w-full max-w-container-max mx-auto md:px-section-padding px-margin-mobile">
+<!-- Brand & Copyright -->
+<div class="flex flex-col gap-4 max-w-sm">
+<div class="text-headline-md font-headline-md text-on-surface dark:text-inverse-on-surface">
+                Mete Klima
+            </div>
+<p class="text-body-md font-body-md text-on-surface-variant dark:text-secondary-fixed-dim">
+                © 2024 Mete Klima. Antalya'nın Serin Nefesi.<br>
+                Merkez, 2130. Sk. no: 6/1, 07500 Serik/Antalya<br>
+                <span class="font-bold">7/24 Açık</span> | <span class="font-bold">0507 032 56 40</span>
+            </p>
+</div>
+<!-- Links Grid -->
+<div class="grid grid-cols-2 md:grid-cols-3 gap-8 w-full md:w-auto">
+<div class="flex flex-col gap-3">
+<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-secondary-fixed-dim hover:text-primary transition-colors hover:opacity-80 focus:ring-2 focus:ring-primary outline-none rounded-sm" href="#hizmetler">Hizmetler</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-secondary-fixed-dim hover:text-primary transition-colors hover:opacity-80 focus:ring-2 focus:ring-primary outline-none rounded-sm" href="#hakkimizda">Hakkımızda</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-secondary-fixed-dim hover:text-primary transition-colors hover:opacity-80 focus:ring-2 focus:ring-primary outline-none rounded-sm" href="#surec">Süreç</a>
+</div>
+<div class="flex flex-col gap-3">
+<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-secondary-fixed-dim hover:text-primary transition-colors hover:opacity-80 focus:ring-2 focus:ring-primary outline-none rounded-sm" href="#neden-biz">Neden Biz?</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-secondary-fixed-dim hover:text-primary transition-colors hover:opacity-80 focus:ring-2 focus:ring-primary outline-none rounded-sm" href="#referanslar">Referanslar</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-secondary-fixed-dim hover:text-primary transition-colors hover:opacity-80 focus:ring-2 focus:ring-primary outline-none rounded-sm" href="#sss">SSS</a>
+</div>
+<div class="flex flex-col gap-3">
+<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-secondary-fixed-dim hover:text-primary transition-colors hover:opacity-80 focus:ring-2 focus:ring-primary outline-none rounded-sm" href="#">KVKK</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-secondary-fixed-dim hover:text-primary transition-colors hover:opacity-80 focus:ring-2 focus:ring-primary outline-none rounded-sm" href="#iletisim">İletişim</a>
+</div>
+</div>
+</footer>
+<!-- GSAP Animations -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="trail.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        gsap.registerPlugin(ScrollTrigger);
+        
+        const heading = document.getElementById('animated-heading');
+        if (heading) {
+            gsap.to(heading, {
+                y: 0,
+                opacity: 1,
+                duration: 0.8,
+                ease: 'power3.out',
+                scrollTrigger: {
+                    trigger: heading,
+                    start: 'top 90%',
+                    once: true
+                }
+            });
+        }
+        
+        // Neden Biz? Canvas Image Sequence Scrubbing
+        const canvas = document.getElementById("hero-lightpass");
+        if (canvas) {
+            const context = canvas.getContext("2d");
+            
+            const frameCount = 192; // 0 to 191
+            const currentFrame = index => (
+                `images/ac_frames/frame_${String(index).padStart(4, '0')}.jpg`
+            );
+            
+            const images = [];
+            const acFrames = { frame: 0 };
+            
+            // Preload images
+            for (let i = 0; i < frameCount; i++) {
+                const img = new Image();
+                img.src = currentFrame(i);
+                images.push(img);
+            }
+            
+            // 1. Create a Master Timeline that pins the entire section
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#neden-biz-content",
+                    start: "top 15%", // Pin it when it's slightly below the top of the screen
+                    end: "+=2500", // Scroll distance
+                    pin: true,
+                    scrub: 1
+                }
+            });
+
+            // 2. Animate Canvas frames over the entire timeline
+            tl.to(acFrames, {
+                frame: frameCount - 1,
+                snap: "frame",
+                ease: "none",
+                onUpdate: render
+            }, 0); // Start at beginning of timeline
+            
+            images[0].onload = () => {
+                canvas.width = images[0].width;
+                canvas.height = images[0].height;
+                render();
+            };
+            
+            function render() {
+                const frameIndex = Math.round(acFrames.frame);
+                if (images[frameIndex]) {
+                    context.clearRect(0, 0, canvas.width, canvas.height);
+                    context.drawImage(images[frameIndex], 0, 0, canvas.width, canvas.height);
+                }
+            }
+            
+            // 3. Animate the Cards (Scroll Stack effect)
+            const cards = gsap.utils.toArray('.scroll-stack-card');
+            
+            // Set initial positions cleanly via GSAP to avoid Tailwind transform conflicts
+            gsap.set(cards, { opacity: 0, yPercent: 150 });
+            gsap.set(cards[0], { opacity: 1, yPercent: 0 }); // First card is visible
+            
+            const step = 1 / (cards.length - 1); 
+            
+            cards.forEach((card, i) => {
+                if (i > 0) {
+                    // Current card comes up from bottom and fades in
+                    tl.to(card, {
+                        opacity: 1,
+                        yPercent: 0,
+                        y: i * 20, // Slight visual stacking offset in pixels
+                        ease: "power2.out",
+                        duration: step
+                    }, (i - 1) * step); 
+                    
+                    // Previous cards scale down
+                    for (let j = 0; j < i; j++) {
+                        tl.to(cards[j], {
+                            scale: 1 - ((i - j) * 0.05), // e.g. 0.95, 0.90
+                            opacity: 1 - ((i - j) * 0.2), 
+                            ease: "power2.out",
+                            duration: step
+                        }, (i - 1) * step);
+                    }
+                }
+            });
+        }
+    });
+</script>
+
+<!-- Floating Action Buttons -->
+<div class="fixed bottom-8 right-8 z-50 flex flex-col gap-4">
+    <a href="tel:+905070325640" class="w-14 h-14 bg-[#4A1D96] text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300" title="Bizi Arayın">
+        <!-- Sleek Phone SVG -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-phone">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        </svg>
+    </a>
+    <a href="https://wa.me/905070325640?text=Merhaba,%20Mete%20Klima%20hizmetleriniz%20hakkında%20bilgi%20almak%20istiyorum." target="_blank" class="w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300" title="WhatsApp ile İletişime Geçin">
+        <!-- WhatsApp Official SVG -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+          <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+        </svg>
+    </a>
+</div>
+</body></html>
