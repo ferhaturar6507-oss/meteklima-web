@@ -141,9 +141,9 @@
 </nav>
 <main>
 <!-- 1. Hero Section -->
-<section class="relative w-full min-h-screen flex items-center justify-center pt-24 pb-section-padding overflow-hidden px-margin-mobile md:px-0">
+<section class="relative w-full min-h-[85vh] md:min-h-screen flex items-center justify-center pt-24 pb-section-padding overflow-hidden px-margin-mobile md:px-0">
 <!-- Full bleed background video -->
-<video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover pointer-events-none">
+<video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover object-[60%_center] md:object-center pointer-events-none">
     <source src="Kliam_hava_üflesin_1080p_202608221723.mp4" type="video/mp4">
 </video>
 <div class="relative z-10 flex flex-col items-end text-right w-full max-w-container-max mx-auto px-margin-mobile md:px-gutter gap-10 mt-12">
@@ -278,40 +278,40 @@
         </div>
         
         <!-- Sticky Stacking Cards -->
-        <div class="relative flex flex-col gap-[25vh] pb-[10vh]">
+        <div class="relative flex flex-col gap-[15vh] md:gap-[25vh] pb-[10vh]">
             <!-- Card 1 -->
-            <div class="sticky top-[12vh] w-full bg-white rounded-[32px] p-6 lg:p-10 shadow-xl border border-surface-container flex flex-col lg:flex-row gap-8 lg:gap-16 items-center origin-top transform-gpu" style="z-index: 10;">
-                <div class="w-full lg:w-5/12 h-64 lg:h-[360px] rounded-2xl overflow-hidden shrink-0 shadow-sm">
+            <div class="sticky top-[12vh] md:top-[12vh] w-full bg-white rounded-[32px] p-6 lg:p-10 shadow-xl border border-surface-container flex flex-col lg:flex-row gap-6 lg:gap-16 items-center origin-top transform-gpu" style="z-index: 10;">
+                <div class="w-full lg:w-5/12 h-56 lg:h-[360px] rounded-2xl overflow-hidden shrink-0 shadow-sm">
                     <img src="trail5.jpeg" alt="Keşif ve Planlama" class="w-full h-full object-cover">
                 </div>
-                <div class="flex flex-col gap-6 lg:w-7/12 py-4">
-                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary font-headline-md text-4xl">1</div>
-                    <h3 class="text-headline-md font-headline-md text-on-surface">Ücretsiz Keşif & Planlama</h3>
-                    <p class="text-on-surface-variant text-lg lg:text-xl leading-relaxed">Mekanınıza en uygun iklimlendirme çözümü için uzman ekibimiz ziyarette bulunur. Kapasite ihtiyacını belirler, estetik ve verimli bir montaj noktası önerir.</p>
+                <div class="flex flex-col gap-4 lg:gap-6 lg:w-7/12 py-2 lg:py-4">
+                    <div class="w-12 h-12 lg:w-16 lg:h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary font-headline-md text-3xl lg:text-4xl">1</div>
+                    <h3 class="text-3xl lg:text-headline-md font-headline-md text-on-surface">Ücretsiz Keşif & Planlama</h3>
+                    <p class="text-on-surface-variant text-base lg:text-xl leading-relaxed">Mekanınıza en uygun iklimlendirme çözümü için uzman ekibimiz ziyarette bulunur. Kapasite ihtiyacını belirler, estetik ve verimli bir montaj noktası önerir.</p>
                 </div>
             </div>
 
             <!-- Card 2 -->
-            <div class="sticky top-[16vh] w-full bg-[#f8fafc] rounded-[32px] p-6 lg:p-10 shadow-2xl border border-surface-container-low flex flex-col lg:flex-row gap-8 lg:gap-16 items-center origin-top transform-gpu" style="z-index: 20;">
-                <div class="w-full lg:w-5/12 h-64 lg:h-[360px] rounded-2xl overflow-hidden shrink-0 shadow-sm">
+            <div class="sticky top-[14vh] md:top-[16vh] w-full bg-[#f8fafc] rounded-[32px] p-6 lg:p-10 shadow-2xl border border-surface-container-low flex flex-col lg:flex-row gap-6 lg:gap-16 items-center origin-top transform-gpu" style="z-index: 20;">
+                <div class="w-full lg:w-5/12 h-56 lg:h-[360px] rounded-2xl overflow-hidden shrink-0 shadow-sm">
                     <img src="trail6.jpeg" alt="Profesyonel Montaj" class="w-full h-full object-cover">
                 </div>
-                <div class="flex flex-col gap-6 lg:w-7/12 py-4">
-                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary font-headline-md text-4xl">2</div>
-                    <h3 class="text-headline-md font-headline-md text-on-surface">Profesyonel Montaj</h3>
-                    <p class="text-on-surface-variant text-lg lg:text-xl leading-relaxed">Kararlaştırılan gün ve saatte adresinize gelerek, evinizi veya ofisinizi kirletmeden, en az tahribatla klimanızın profesyonel kurulumunu gerçekleştiririz.</p>
+                <div class="flex flex-col gap-4 lg:gap-6 lg:w-7/12 py-2 lg:py-4">
+                    <div class="w-12 h-12 lg:w-16 lg:h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary font-headline-md text-3xl lg:text-4xl">2</div>
+                    <h3 class="text-3xl lg:text-headline-md font-headline-md text-on-surface">Profesyonel Montaj</h3>
+                    <p class="text-on-surface-variant text-base lg:text-xl leading-relaxed">Kararlaştırılan gün ve saatte adresinize gelerek, evinizi veya ofisinizi kirletmeden, en az tahribatla klimanızın profesyonel kurulumunu gerçekleştiririz.</p>
                 </div>
             </div>
 
             <!-- Card 3 -->
-            <div class="sticky top-[20vh] w-full bg-[#f1f5f9] rounded-[32px] p-6 lg:p-10 shadow-2xl border border-outline-variant/30 flex flex-col lg:flex-row gap-8 lg:gap-16 items-center origin-top transform-gpu" style="z-index: 30;">
-                <div class="w-full lg:w-5/12 h-64 lg:h-[360px] rounded-2xl overflow-hidden shrink-0 shadow-sm">
+            <div class="sticky top-[16vh] md:top-[20vh] w-full bg-[#f1f5f9] rounded-[32px] p-6 lg:p-10 shadow-2xl border border-outline-variant/30 flex flex-col lg:flex-row gap-6 lg:gap-16 items-center origin-top transform-gpu" style="z-index: 30;">
+                <div class="w-full lg:w-5/12 h-56 lg:h-[360px] rounded-2xl overflow-hidden shrink-0 shadow-sm">
                     <img src="trail1.jpeg" alt="Teslimat ve Bakım" class="w-full h-full object-cover">
                 </div>
-                <div class="flex flex-col gap-6 lg:w-7/12 py-4">
-                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary font-headline-md text-4xl">3</div>
-                    <h3 class="text-headline-md font-headline-md text-on-surface">Teslimat & Destek</h3>
-                    <p class="text-on-surface-variant text-lg lg:text-xl leading-relaxed">Cihazın tüm performans testleri yapıldıktan sonra detaylı kullanım bilgisi verilir. İlerleyen yıllarda da periyodik bakım hizmetiyle 7/24 yanınızdayız.</p>
+                <div class="flex flex-col gap-4 lg:gap-6 lg:w-7/12 py-2 lg:py-4">
+                    <div class="w-12 h-12 lg:w-16 lg:h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary font-headline-md text-3xl lg:text-4xl">3</div>
+                    <h3 class="text-3xl lg:text-headline-md font-headline-md text-on-surface">Teslimat & Destek</h3>
+                    <p class="text-on-surface-variant text-base lg:text-xl leading-relaxed">Cihazın tüm performans testleri yapıldıktan sonra detaylı kullanım bilgisi verilir. İlerleyen yıllarda da periyodik bakım hizmetiyle 7/24 yanınızdayız.</p>
                 </div>
             </div>
         </div>
@@ -327,31 +327,31 @@
     
     <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row relative items-start gap-12" id="neden-biz-content">
         <!-- Left: Sticky Canvas -->
-        <div class="w-full md:w-1/2 sticky top-[15vh] h-[50vh] md:h-[70vh] rounded-[32px] overflow-hidden shadow-2xl z-10 bg-black">
+        <div class="w-full md:w-1/2 sticky top-[10vh] md:top-[15vh] h-[35vh] md:h-[70vh] rounded-[32px] overflow-hidden shadow-2xl z-10 bg-black">
             <canvas id="hero-lightpass" class="w-full h-full object-cover"></canvas>
         </div>
         
         <!-- Right: Stack Cards Container -->
-        <div class="w-full md:w-1/2 h-[50vh] md:h-[70vh] relative perspective-1000 mt-12 md:mt-0">
+        <div class="w-full md:w-1/2 h-[45vh] md:h-[70vh] relative perspective-1000 mt-6 md:mt-0">
             <!-- Card 1 -->
-            <div class="scroll-stack-card absolute top-0 left-0 w-full bg-white rounded-[40px] p-12 md:p-16 shadow-2xl border border-surface-container-low origin-top z-10 transform-gpu h-full flex flex-col justify-center">
-                <h3 class="text-4xl md:text-5xl font-headline-md font-bold text-on-surface mb-6">A Sınıfı Enerji Verimliliği</h3>
-                <p class="text-on-surface-variant text-xl md:text-2xl leading-relaxed">Yüksek teknolojili inverter motorlarımız sayesinde enerjiden maksimum tasarruf sağlarken, doğayı koruyan sürdürülebilir bir serinlik elde edersiniz.</p>
+            <div class="scroll-stack-card absolute top-0 left-0 w-full bg-white/95 backdrop-blur-md md:bg-white rounded-[32px] md:rounded-[40px] p-8 md:p-16 shadow-2xl border border-surface-container-low origin-top z-10 transform-gpu h-full flex flex-col justify-center">
+                <h3 class="text-3xl md:text-5xl font-headline-md font-bold text-on-surface mb-4 md:mb-6">A Sınıfı Enerji Verimliliği</h3>
+                <p class="text-on-surface-variant text-lg md:text-2xl leading-relaxed">Yüksek teknolojili inverter motorlarımız sayesinde enerjiden maksimum tasarruf sağlarken, doğayı koruyan sürdürülebilir bir serinlik elde edersiniz.</p>
             </div>
             <!-- Card 2 -->
-            <div class="scroll-stack-card opacity-0 absolute top-0 left-0 w-full bg-[#f8fafc] rounded-[40px] p-12 md:p-16 shadow-2xl border border-surface-container-low origin-top z-20 transform-gpu h-full flex flex-col justify-center">
-                <h3 class="text-4xl md:text-5xl font-headline-md font-bold text-on-surface mb-6">Fısıltı Kadar Sessiz</h3>
-                <p class="text-on-surface-variant text-xl md:text-2xl leading-relaxed">Özel aerodinamik fan yapısı ve izolasyon teknolojisiyle klimalarımız çalışırken varlığını unutturur. Kesintisiz uyku ve huzur sizinle.</p>
+            <div class="scroll-stack-card opacity-0 absolute top-0 left-0 w-full bg-[#f8fafc]/95 backdrop-blur-md md:bg-[#f8fafc] rounded-[32px] md:rounded-[40px] p-8 md:p-16 shadow-2xl border border-surface-container-low origin-top z-20 transform-gpu h-full flex flex-col justify-center">
+                <h3 class="text-3xl md:text-5xl font-headline-md font-bold text-on-surface mb-4 md:mb-6">Fısıltı Kadar Sessiz</h3>
+                <p class="text-on-surface-variant text-lg md:text-2xl leading-relaxed">Özel aerodinamik fan yapısı ve izolasyon teknolojisiyle klimalarımız çalışırken varlığını unutturur. Kesintisiz uyku ve huzur sizinle.</p>
             </div>
             <!-- Card 3 -->
-            <div class="scroll-stack-card opacity-0 absolute top-0 left-0 w-full bg-[#f1f5f9] rounded-[40px] p-12 md:p-16 shadow-2xl border border-surface-container-low origin-top z-30 transform-gpu h-full flex flex-col justify-center">
-                <h3 class="text-4xl md:text-5xl font-headline-md font-bold text-on-surface mb-6">Akıllı Hava Akımı</h3>
-                <p class="text-on-surface-variant text-xl md:text-2xl leading-relaxed">Mekandaki insan hareketlerini algılayan akıllı sensörler sayesinde, havayı üzerinize değil boşluklara yönlendirerek sağlıklı bir serinleme sunar.</p>
+            <div class="scroll-stack-card opacity-0 absolute top-0 left-0 w-full bg-[#f1f5f9]/95 backdrop-blur-md md:bg-[#f1f5f9] rounded-[32px] md:rounded-[40px] p-8 md:p-16 shadow-2xl border border-surface-container-low origin-top z-30 transform-gpu h-full flex flex-col justify-center">
+                <h3 class="text-3xl md:text-5xl font-headline-md font-bold text-on-surface mb-4 md:mb-6">Akıllı Hava Akımı</h3>
+                <p class="text-on-surface-variant text-lg md:text-2xl leading-relaxed">Mekandaki insan hareketlerini algılayan akıllı sensörler sayesinde, havayı üzerinize değil boşluklara yönlendirerek sağlıklı bir serinleme sunar.</p>
             </div>
             <!-- Card 4 -->
-            <div class="scroll-stack-card opacity-0 absolute top-0 left-0 w-full bg-white rounded-[40px] p-12 md:p-16 shadow-2xl border border-surface-container-low origin-top z-40 transform-gpu h-full flex flex-col justify-center">
-                <h3 class="text-4xl md:text-5xl font-headline-md font-bold text-on-surface mb-6">Minimalist & Şık Tasarım</h3>
-                <p class="text-on-surface-variant text-xl md:text-2xl leading-relaxed">Evinizin veya ofisinizin dekorasyonunu bozmayan, özenle tasarlanmış estetik hatlarıyla modern mekanlara kusursuz uyum sağlar.</p>
+            <div class="scroll-stack-card opacity-0 absolute top-0 left-0 w-full bg-white/95 backdrop-blur-md md:bg-white rounded-[32px] md:rounded-[40px] p-8 md:p-16 shadow-2xl border border-surface-container-low origin-top z-40 transform-gpu h-full flex flex-col justify-center">
+                <h3 class="text-3xl md:text-5xl font-headline-md font-bold text-on-surface mb-4 md:mb-6">Minimalist & Şık Tasarım</h3>
+                <p class="text-on-surface-variant text-lg md:text-2xl leading-relaxed">Evinizin veya ofisinizin dekorasyonunu bozmayan, özenle tasarlanmış estetik hatlarıyla modern mekanlara kusursuz uyum sağlar.</p>
             </div>
         </div>
     </div>
@@ -528,7 +528,7 @@
 
 </main>
 <!-- JSON Footer Component -->
-<footer class="bg-surface-container-low dark:bg-inverse-surface text-primary dark:text-primary-fixed-dim full-width rounded-t-lg no-border space-y-12 flat no shadows flex flex-col md:flex-row justify-between items-start px-section-padding py-section-padding w-full max-w-container-max mx-auto md:px-section-padding px-margin-mobile">
+<footer class="bg-surface-container-low dark:bg-inverse-surface text-primary dark:text-primary-fixed-dim full-width rounded-t-lg no-border space-y-12 flat no shadows flex flex-col md:flex-row justify-between items-start px-8 md:px-section-padding py-16 pb-32 md:pb-section-padding w-full max-w-container-max mx-auto">
 <!-- Brand & Copyright -->
 <div class="flex flex-col gap-4 max-w-sm">
 <div class="text-headline-md font-headline-md text-on-surface dark:text-inverse-on-surface">
@@ -541,18 +541,18 @@
             </p>
 </div>
 <!-- Links Grid -->
-<div class="grid grid-cols-2 md:grid-cols-3 gap-8 w-full md:w-auto">
-<div class="flex flex-col gap-3">
+<div class="grid grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-6 w-full md:w-auto mt-8 md:mt-0">
+<div class="flex flex-col gap-4">
 <a class="text-label-caps font-label-caps text-on-surface-variant dark:text-secondary-fixed-dim hover:text-primary transition-colors hover:opacity-80 focus:ring-2 focus:ring-primary outline-none rounded-sm" href="#hizmetler">Hizmetler</a>
 <a class="text-label-caps font-label-caps text-on-surface-variant dark:text-secondary-fixed-dim hover:text-primary transition-colors hover:opacity-80 focus:ring-2 focus:ring-primary outline-none rounded-sm" href="#hakkimizda">Hakkımızda</a>
 <a class="text-label-caps font-label-caps text-on-surface-variant dark:text-secondary-fixed-dim hover:text-primary transition-colors hover:opacity-80 focus:ring-2 focus:ring-primary outline-none rounded-sm" href="#surec">Süreç</a>
 </div>
-<div class="flex flex-col gap-3">
+<div class="flex flex-col gap-4">
 <a class="text-label-caps font-label-caps text-on-surface-variant dark:text-secondary-fixed-dim hover:text-primary transition-colors hover:opacity-80 focus:ring-2 focus:ring-primary outline-none rounded-sm" href="#neden-biz">Neden Biz?</a>
 <a class="text-label-caps font-label-caps text-on-surface-variant dark:text-secondary-fixed-dim hover:text-primary transition-colors hover:opacity-80 focus:ring-2 focus:ring-primary outline-none rounded-sm" href="#referanslar">Referanslar</a>
 <a class="text-label-caps font-label-caps text-on-surface-variant dark:text-secondary-fixed-dim hover:text-primary transition-colors hover:opacity-80 focus:ring-2 focus:ring-primary outline-none rounded-sm" href="#sss">SSS</a>
 </div>
-<div class="flex flex-col gap-3">
+<div class="flex flex-col gap-4">
 <a class="text-label-caps font-label-caps text-on-surface-variant dark:text-secondary-fixed-dim hover:text-primary transition-colors hover:opacity-80 focus:ring-2 focus:ring-primary outline-none rounded-sm" href="#">KVKK</a>
 <a class="text-label-caps font-label-caps text-on-surface-variant dark:text-secondary-fixed-dim hover:text-primary transition-colors hover:opacity-80 focus:ring-2 focus:ring-primary outline-none rounded-sm" href="#iletisim">İletişim</a>
 </div>
